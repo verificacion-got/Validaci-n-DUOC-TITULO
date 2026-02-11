@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -59,10 +59,10 @@
             margin: 0 auto;
         }
 
-        /* Título con barra amarilla - Aumentado */
+        /* Título con barra amarilla */
         .page-title {
             font-family: 'Georgia', serif;
-            font-size: 30px; /* Antes 26px */
+            font-size: 30px;
             font-weight: normal;
             color: #222;
             border-left: 7px solid #fdb913;
@@ -71,17 +71,17 @@
             line-height: 1.1;
         }
 
-        /* Fecha de emisión - Aumentado */
+        /* Fecha de emisión */
         .issue-date {
             font-weight: bold;
-            font-size: 16px; /* Antes 14px */
+            font-size: 16px;
             margin-bottom: 25px;
             color: #000;
         }
 
-        /* Texto legal - Aumentado */
+        /* Texto legal */
         .legal-text {
-            font-size: 15px; /* Antes 13px */
+            font-size: 15px;
             color: #444;
             margin-bottom: 30px;
             text-align: left;
@@ -92,20 +92,20 @@
             color: #000;
         }
 
-        /* Título del Certificado - Aumentado */
+        /* Título del Certificado */
         .cert-type {
             font-family: 'Georgia', serif;
-            font-size: 24px; /* Antes 20px */
+            font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
             color: #222;
             margin-bottom: 25px;
         }
 
-        /* Información del Alumno - Aumentado */
+        /* Información del Alumno */
         .student-info {
             font-family: 'Arial', sans-serif;
-            font-size: 20px; /* Antes 18px */
+            font-size: 20px;
             color: #333;
             margin-bottom: 40px;
         }
@@ -114,7 +114,7 @@
             text-transform: uppercase;
             margin-bottom: 4px;
             line-height: 1.3;
-            font-weight: 500; /* Un poco más grueso */
+            font-weight: 500;
         }
 
         .student-rut {
@@ -131,24 +131,63 @@
 
         .degree-name {
             text-transform: uppercase;
-            margin-top: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
             line-height: 1.3;
+            font-weight: bold; /* Destacamos un poco más la carrera */
+        }
+
+        /* Nuevos estilos para los detalles adicionales */
+        .extra-details {
+            font-size: 18px;
+            color: #555;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .extra-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .extra-row span:first-child {
+            font-weight: normal;
+        }
+
+        .extra-row span:last-child {
+            font-weight: bold;
+            color: #000;
+            text-align: right;
         }
 
         /* --- BOTONES --- */
         .btn {
             display: block;
             width: 100%;
-            padding: 14px; /* Botón un poco más grande */
+            padding: 14px;
             text-align: center;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 16px; /* Letra del botón más grande */
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 15px;
             cursor: pointer;
+            transition: opacity 0.3s;
         }
 
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Estilo Botón Amarillo (Descargar PDF) */
+        .btn-yellow {
+            background-color: #fdb913; /* Color amarillo Duoc */
+            color: #000;
+            border: none;
+        }
+
+        /* Estilo Botón Blanco (Ir a Duoc) */
         .btn-white {
             background-color: #fff;
             color: #000;
@@ -176,7 +215,7 @@
     <main class="main-content">
         <h1 class="page-title">Certificado Vigente</h1>
 
-        <p class="issue-date">Emitido el 27/11/2025</p>
+        <p class="issue-date">Emitido el 15/12/2010</p>
 
         <div class="legal-text">
             Las certificaciones emitidas a través de esta página, son otorgadas bajo Firma Electrónica Avanzada, en conformidad a lo dispuesto en la ley N° 19799 y su Reglamento.<br><br>
@@ -186,12 +225,30 @@
         <h2 class="cert-type">CERTIFICADO DE TÍTULO</h2>
 
         <div class="student-info">
-            <div class="student-name">MARCELO FERNANDO ASTETE JIMÉNEZ</div>
-            <div class="student-rut">12.687.723-4</div>
-            <div class="cert-id">ID Certificado: <strong>4197382773</strong></div>
-            <div class="degree-name">TÉCNICO EN ELECTRICIDAD Y AUTOMATIZACIÓN INDUSTRIAL</div>
+            <div class="student-name">JUAN SEBASTIÁN DÍAZ ARRIAGADA</div>
+            <div class="student-rut">15.479.536-7</div>
+            <div class="cert-id">ID Certificado: <strong>5897292373</strong></div>
+            
+            <div class="degree-name">INGENIERO EN ELECTRICIDAD Y AUTOMATIZACIÓN INDUSTRIAL</div>
+
+            <div class="extra-details">
+                <div class="extra-row">
+                    <span>Nota:</span>
+                    <span>6,5</span>
+                </div>
+                <div class="extra-row">
+                    <span>Sede:</span>
+                    <span>MAIPÚ</span>
+                </div>
+                <div class="extra-row">
+                    <span>Modalidad:</span>
+                    <span>Semipresencial</span>
+                </div>
+            </div>
         </div>
 
+        <a href="cristianvale.pdf" class="btn btn-yellow" download="Certificado_Titulo.pdf">Descargar PDF</a>
+        
         <a href="https://www.duoc.cl" class="btn btn-white">Ir a Duoc.cl</a>
 
     </main>
